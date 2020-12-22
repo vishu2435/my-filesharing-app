@@ -50,7 +50,7 @@ function connect(id){
             },2000)
          
         })      
-        GlobalVariables.on('open',id=>{
+        GlobalVariables.PEER.on('open',id=>{
             h3.innerHTML = `Connected to id ${id}`
         })
     }else{
@@ -65,9 +65,7 @@ function recieve() {
     let h2 = document.createElement('h2')
     h2.innerText=`ID: ${GlobalVariables.PEER.id}`
     GlobalVariables.connectionBlock.appendChild(h2)
-    GlobalVariables.PEER.on('open',id=>{
-    
-    })
+   
     GlobalVariables.PEER.on('connection',function( dataconnection) {
         console.log("Connected ",dataconnection);
         h2.innerText=`STATUS: CONNECTED`
