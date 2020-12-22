@@ -50,6 +50,9 @@ function connect(id){
             },2000)
          
         })      
+        GlobalVariables.on('open',id=>{
+            h3.innerHTML = `Connected to id ${id}`
+        })
     }else{
         alert("You are a reciever")
     }
@@ -67,6 +70,7 @@ function recieve() {
     })
     GlobalVariables.PEER.on('connection',function( dataconnection) {
         console.log("Connected ",dataconnection);
+        h2.innerText=`STATUS: CONNECTED`
     })
     }else{
         alert('You are a sender')
