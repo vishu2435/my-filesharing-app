@@ -65,6 +65,9 @@ function recieve() {
     GlobalVariables.PEER.on('open',id=>{
     
     })
+    GlobalVariables.PEER.on('connection',function( dataconnection) {
+        console.log("Connected ",dataconnection);
+    })
     }else{
         alert('You are a sender')
     }
