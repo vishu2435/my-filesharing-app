@@ -1,0 +1,30 @@
+.directory:hover{
+    background-color: aliceblue;
+}
+.directory{
+    cursor: pointer;
+    border: 2px solid black;
+    margin-right: 20px;
+    width: 20%;
+    overflow: hidden;
+    padding: 30px;
+}
+.filesContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pathInfo{
+    position: sticky;
+    top: 0;
+    background: black;
+    color: white;
+    padding: 5px 32px;
+}
+.backIcon{
+    width: fit-content;
+    margin-top: 20px;
+    position: sticky;
+    top: 70px;
+    cursor: pointer;
+}
